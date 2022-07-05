@@ -12,7 +12,7 @@ Output: 2
 # Test Case: [[1,4], [2,3], [4,6], [8,9]]
 # We can see a pattern and it seems like for maximal disjoint sets, we need a set that ends early (hypothesis: starts early?)
 
-def disjoint_intervals(intervals: list[int]) -> int:
+def disjoint_intervals(intervals: list[list[int, int]]) -> int:
     intervals.sort(key = lambda x: x[1])
     prev_end = intervals[0][1]
     count = 1
